@@ -1,5 +1,5 @@
 # ChromeComs
-### Making messaging between content and background script manageable.
+### Making messaging between content and background scripts manageable.
 ChromeComs is a small framework of two files that makes messaging between content scripts and background scripts manageable.
 
 ## Getting started
@@ -20,7 +20,7 @@ Once they're added, the `coms` variables will appear in your Content Script and 
 ## API
 ChromeComs api was designed to be as simple as possible and consistent between the content and background scripts. What you see below is the same for the content and background scripts. 
 
-#### coms.send( *eventName (string)*, *data (\*)*[, *callback (function)*])
+#### coms.send( *eventName (string)*, *data (object/string/array/boolean)*[, *callback (function)*])
 `coms.send` is the method for transporting data down the wire to the corresponding script for handling on the other side.
 
 	coms.send("userUpdate", userObj, function(response) {
