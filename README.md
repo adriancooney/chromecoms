@@ -1,6 +1,6 @@
 # ChromeComs
 ### Making messaging between content and background scripts manageable.
-ChromeComs is a small framework of two files that makes messaging between content scripts and background scripts manageable.
+ChromeComs is a small framework of two files that makes messaging between content scripts and background scripts manageable in Chrome Extensions.
 
 ## Getting started
 To get started with ChromeComs, added chromecoms to your extensions and include them in the `manifest.json` in their respective locations.
@@ -58,3 +58,7 @@ Handle all incoming events by providing a function.
 	 });
 
 See code for inline documentation.
+
+## Troubleshooting
+#### Error: Port: Could not establish connection. Receiving end does not exist. 
+This is `coms` trying to send information to a content script that won't take it. This happens for example when you make a change to your extensions and have multiple tabs open where the content script is running but haven't refreshed them yet.
