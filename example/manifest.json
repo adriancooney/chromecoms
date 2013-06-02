@@ -1,0 +1,14 @@
+{
+  "name": "Chrome Coms Example extension",
+  "description": "Demonstrates usage and features of chromecoms",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["tabs", "*://*/*"],
+  "background": {
+    "scripts": ["chromecoms/backend.js", "background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["chromecoms/frontend.js", "content.js"]
+  }]
+}
